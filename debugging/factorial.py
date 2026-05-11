@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+import sys
+
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
+
+if __name__ == "__main__":
+    print(factorial(int(sys.argv[1])))
+
+factorial_recursive.py
+
+#!/usr/bin/python3
+import sys
+
+def factorial(n):
+    result = 1
+    while n > 1:
+        result *= n
+        n -= 1
+    return result
+
+f = factorial(int(sys.argv[1]))
+print(f)
+
